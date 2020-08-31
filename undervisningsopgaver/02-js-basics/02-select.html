@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 20px;
+        }
+
+        article {
+            /*           flex-basis: 50%;*/
+            border: 1px solid #999;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        footer {
+            text-align: center;
+        }
+
+
+        header,
+        footer {
+            padding: 10px, 0;
+            border: 1px solid #999;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+
+
+        <h2>Undertitel</h2>
+
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/animals" alt="" class="first">
+                <h3>Article 1</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illo cupiditate iusto numquam officia vel dolore facilis a odit, soluta magni voluptatem at alias voluptas, eum explicabo animi tempora nulla.</p>
+            </article>
+
+            <article>
+                <img src="https://placeimg.com/640/480/nature" alt="" class="first">
+                <h3>Article 1</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illo cupiditate iusto numquam officia vel dolore facilis a odit, soluta magni voluptatem at alias voluptas, eum explicabo animi tempora nulla.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>This is the footer</footer>
+
+    <script>
+        const title = document.querySelector("header h1");
+        const article1 = document.querySelector("article:nth-child(1)");
+        const img1 = document.querySelector("article:nth-child(1) img");
+        const article1Heading = document.querySelector("article:nth-child(1) h3");
+        const article1Content = document.querySelector("article:nth-child(1) p");
+
+        title.textContent = "Billeder";
+        article1Heading.textContent = "Arkitektur";
+        article1Content.textContent = "Bygninger skaber rum";
+
+    </script>
+</body>
+
+</html>
