@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+    <p>Hvor mange timer?</p>
+    <input type="text" id="timer">
+    <p>Hvad er co2 udslippet?</p>
+    <input type="text" id="co2">
+    <button>Klik og beregn co2 udslippet, kig i konsollen</button>
+
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let timer = document.querySelector("#timer").value;
+            let co2 = document.querySelector("#co2").value;
+            let a = udregning(timer, co2);
+            let resultat;
+            if (isNaN(a)) {
+                resultat = "Det er ikke et tal, prøv igen";
+            }
+            if (a < 100) {
+
+                resultat = "Tæt på Thunberg";
+
+            } else if (a < 100 - 200) {
+
+                resultat = "Ja ja, du behøver ikke at melde dig ud af Å!";
+
+
+            } else if (a < 200 - 600) {
+
+                resultat = "Det er godt for turismen i nordeuropa";
+
+            } else {
+
+                resultat = `CO2 udslippet er = ${a}, Nå ja, vi kan jo altid kolonisere en anden planet `;
+            }
+
+
+
+            console.log(resultat);
+        }
+
+        function udregning(t, c) {
+            return t * c;
+        }
+
+
+        //
+        //
+        //            let timer = 3;
+        //            let co2 = 109;
+        //            let udregning = timer * co2;
+        //            let resultat;
+
+
+
+
+
+
+
+
+        /*    <p>Hvad er længden?</p>
+    <input type="text" id="længde">
+    <p>Hvad er bredden?</p>
+    <input type="text" id="bredde">
+    <button>Klik og beregn areal, kig i konsollen</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let længde = document.querySelector("#længde").value;
+            let bredde = document.querySelector("#bredde").value;
+            let a = areal(længde, bredde);
+            let resultat;
+            if (isNaN(a)) {
+                resultat = "Det er ikke et tal, prøv igen";
+            } else if (a <= 0) {
+
+                resultat = "Arealet er mindre end nul! Prøv igen"
+            } else {
+                resultat = `Arealet er ${a}`;
+            }
+
+            console.log(resultat);
+        }
+
+        function areal(l, b) {
+            return l * b;
+        }*/
+
+    </script>
+</body>
+
+</html>
