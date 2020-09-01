@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+    <img id="billede" src="https://placeimg.com/600/400/people" alt="people">
+
+    <script>
+        const kategorier = ["animals", "arch", "people", "nature", "tech"];
+        billede.addEventListener("click", skift);
+
+        function skift() {
+            const nummer = Math.round(Math.random() * 4);
+            billede.src = "https://placeimg.com/600/400/people" + kategorier[nummer];
+            billede.alt = kategorier[nummer];
+        };
+
+    </script>
+</body>
+
+</html>
