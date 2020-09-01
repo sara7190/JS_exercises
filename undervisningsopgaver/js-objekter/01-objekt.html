@@ -17,26 +17,14 @@
 
     </article>
     <script>
-        let dyr = [{
-            "navn": "Gris",
-            "type": "Pattedyr",
-            "levested": "svinesti"
-        }, {
-            "navn": "Ko",
-            "type": "Pattedyr",
-            "levested": "stald"
-        }, {
-            "navn": "Hugorm",
-            "type": "krybdyr",
-            "levested": "skoven"
-        }]
+        let dyr = {
+            "navn": "gris",
+            "type": "pattedyr",
+            "levested": "svinesti",
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+        };
 
-        let elm = document.querySelector("article");
-        //løb igennem array "dyr"
-        dyr.forEach(etDyr => {
-            console.log(etDyr.navn);
-            elm.innerHTML += `<p>Navn: ${etDyr.navn} Type: ${etDyr.type} </p>`;
-        })
+        console.log(dyr);
 
     </script>
 </body>
