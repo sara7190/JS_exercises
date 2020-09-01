@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hvis alle dyr</title>
+</head>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objekter</title>
+</head>
+
+<body>
+    <section id="liste"></section>
+
+    <script>
+        let dyr = [{
+                "navn": "gris",
+                "type": "pattedyr",
+                "levested": "svinesti",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+            },
+            {
+                "navn": "frø",
+                "type": "amfibie",
+                "levested": "sø",
+                "billede": "http://mabe-kea.dk/E19/pics/frog.png"
+            },
+            {
+                "navn": "ræv",
+                "type": "pattedyr",
+                "levested": "skov",
+                "billede": "http://mabe-kea.dk/E19/pics/fox.png"
+            },
+            {
+                "navn": "sild",
+                "type": "fisk",
+                "levested": "havet",
+                "billede": "http://mabe-kea.dk/E19/pics/sild.jpg"
+            },
+            {
+                "navn": "krokodille",
+                "type": "krybdyr",
+                "levested": "flod",
+                "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg"
+            }
+        ];
+
+
+        let elm = document.querySelector("section");
+        //løb igennem array "dyr"
+        dyr.forEach(dyr => {
+            console.log(dyr.navn);
+            elm.innerHTML += `<p>Navn: ${dyr.navn} Type: ${dyr.type} Levested: ${dyr.levested} </p>`;
+        })
+
+    </script>
+</body>
+
+
+
+</html>
